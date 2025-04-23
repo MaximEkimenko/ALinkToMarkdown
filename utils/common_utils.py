@@ -43,7 +43,7 @@ def create_index_md_file(directory: Path, index_file_name: str = "INDEX.md") -> 
     files = list(directory.iterdir())
     files = [file for file in files if file.is_file()]
 
-    index_content_list = [f"# Список файлов папки {directory.name} \n"]
+    index_content_list = [f"# Files in {directory.name}\n"]
     for i, file in enumerate(files, start=1):
         file_name = file.name
         obsidian_link = f"[[{file_name}]]"
