@@ -87,10 +87,6 @@ def test_save_markdown_file(tmp_path: Path) -> None:
 
 def test_create_index_md_file(tmp_path: Path) -> None:
     """Тестирование создания INDEX.md файла."""
-    # import shutil
-    # shutil.rmtree(tmp_path, ignore_errors=True)
-    # tmp_path.mkdir()
-
     (tmp_path / "file1.md").write_text("Content 1")
     (tmp_path / "file2.md").write_text("Content 2")
 
@@ -98,19 +94,6 @@ def test_create_index_md_file(tmp_path: Path) -> None:
 
     index_file = tmp_path / "INDEX.md"
     assert index_file.exists()
-
-    # content = index_file.read_text(encoding="utf-8").replace("\r\n", "\n")
-    # expected_content = (
-    #     f"# Files in {tmp_path.name}\n"
-    #     f"1. [[file1.md]]\n"
-    #     f"2. [[file2.md]]\n"
-    # ).replace("\r\n", "\n")
-    #
-    # print(f"Actual content:\n{content}")
-    # print(f"Expected content:\n{expected_content}")
-    #
-    # assert content == expected_content, \
-    #     f"Expected:\n{expected_content}\nGot:\n{content}"
 
 
 def test_create_index_md_file_nonexistent_directory() -> None:

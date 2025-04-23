@@ -86,6 +86,13 @@ streamlit run main.py
 4. Нажмите кнопку "Запустить парсинг".
 5. Результаты будут сохранены в указанной директории в формате Markdown.
 
-## Запуск в docker
---TODO
+## Запуск в docker- Сборка образа:
+```bash
+docker build -t a-link-to-md .
+```
+- Запуск контейнера:
+```bash
+docker run -p 8501:8501 -v ${PWD}/misc:/app/misc a-link-to-md
+```
+- при запуске из docker md файлы будут создаваться в папке misc (соответственно app/misc для контейнера). 
 
