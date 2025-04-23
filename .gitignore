@@ -1,0 +1,13 @@
+/.venv
+/misc
+.env
+.idea
+/venv
+__pycache__
+tst_in_plasma_report.py
+/temp
+statistics.txt
+plasma_report.db
+logs
+static
+tst_parser.py
